@@ -12,6 +12,13 @@ latexmk -xelatex main.tex
 
 也可依次运行 `xelatex main.tex`、`biber main`、`xelatex main.tex`、`xelatex main.tex`。输出文件为 `main.pdf`。若缺少字体或宏包，请按报错安装。
 
+微信公众号文章《西电Latex论文模板使用经验总结》[1] 介绍了从安装 TeX 到编译 xduts 的过程，初学者可结合以下步骤使用：
+
+1. Windows 可安装 TeX Live，macOS 可安装 MacTeX；Linux 可使用适合本系统的 TeX Live 安装方式。安装后可运行 `xelatex --version` 和 `biber --version` 检查命令是否可用。
+2. 使用 VS Code 时，可安装 LaTeX Workshop 扩展并打开本目录中的 `main.tex`。选择 XeLaTeX 和 Biber 编译流程，或在终端运行上面的 `latexmk` 命令。
+3. 本目录已包含论文类文件和编译配置，通常不需要自行从 xduts 源码生成宏包。编译完成后检查 `main.pdf` 中的目录、交叉引用和参考文献；不完整时请确认 Biber 已运行并再次编译。
+4. 需要了解更多接口和配置时，可查阅 xduts 上游项目与说明文档 [2][3]；图表、公式等排版示例可参考上游讨论 [4]。文章也介绍了 Overleaf 等使用方式，但本模板尚未在 Overleaf 验证。
+
 - `main.tex`：填写题目、姓名、班级、学号、导师等封面信息和关键词。
 - `chapters/`：填写中英文摘要、章节与致谢；可根据需要增加章节并在 `main.tex` 中引用。
 - `tables/`、`figures/`：存放自制表格和图片；正文中的 `example-image` 是 TeX 发行版提供的示意图，需替换。
@@ -64,4 +71,12 @@ latexmk -xelatex main.tex
 
 ## 来源与许可
 
-文档类源自 [xduts](https://github.com/note286/xduts)，本地类文件标注版本 6.1.4.2。类文件注明 LaTeX Project Public License 1.3c 或更高版本，保留其中的版权及许可声明，分发时请遵守上游许可。`xdulogo.pdf` 的版权属于西安电子科技大学。
+文档类源自 xduts [2]，本地类文件标注版本 6.1.4.2。类文件注明 LaTeX Project Public License 1.3c 或更高版本，保留其中的版权及许可声明，分发时请遵守上游许可。`xdulogo.pdf` 的版权属于西安电子科技大学。
+
+## References
+
+1. zstar. [西电Latex论文模板使用经验总结](https://mp.weixin.qq.com/s/-jNqKYSX4W8mWkS14MtLeQ). 微信公众号「我有一计」, 2026-01-20. 访问于 2026-11-06。
+2. note286. [xduts: 西安电子科技大学 LaTeX 论文模板](https://github.com/note286/xduts). GitHub.
+3. xduts. [模板使用说明](https://mirrors.ibiblio.org/pub/mirrors/CTAN/macros/xetex/latex/xduts/xduts.pdf). CTAN 镜像。
+4. note286. [xduts 图表和公式示例讨论](https://github.com/note286/xduts/discussions/40). GitHub Discussions.
+5. 2022 级西安电子科技大学生命科学技术学院本科生提供的毕业设计时间线、答辩及归档经验。本仓库整理，非学校正式通知；《22级本科生毕业设计（论文）系统归档材料说明及时间填写安排》原文未随仓库提供。
