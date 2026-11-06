@@ -1,0 +1,32 @@
+% !TeX program = xelatex
+% !BIB program = biber
+\documentclass{xduugthesis}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\xdusetup{
+  style / latin-font = tac,
+  style / math-font = stix2,
+  style / biblatex-option = { gbpunctin = false },
+  info = {
+    title = {论文题目},
+    author = {姓名},
+    department = {学院名称},
+    major = {专业名称},
+    class-id = {班级},
+    student-id = {学号},
+    supervisor-school = {指导教师},
+    bib-resource = {references.bib},
+    abstract = {chapters/abstract_zh.tex},
+    abstract* = {chapters/abstract_en.tex},
+    keywords = {关键词一,关键词二,关键词三},
+    keywords* = {Keyword one,Keyword two,Keyword three},
+    acknowledgements = {chapters/acknowledge.tex}
+  }
+}
+
+\begin{document}
+\include{chapters/introduction}
+\include{chapters/conclusion}
+\end{document}
